@@ -5,7 +5,7 @@ from splinter import Browser
 from webdriver_manager.chrome import ChromeDriverManager
 
 ## SCRAPE FUNCTION
-def scrape():
+def scrape_mars():
 
     ## Setup Splinter
     executable_path = {'executable_path': ChromeDriverManager().install()}
@@ -95,5 +95,9 @@ def scrape():
     
     ## Close Chrome Browser
     browser.quit()
+
+    ## Print
+    print("Scrape completed")
     
     return (news_title, news_paragraph, featured_image_url, hemisphere_image_urls)
+
