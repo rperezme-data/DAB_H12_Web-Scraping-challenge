@@ -53,10 +53,9 @@ def scrape_mars():
     mars_facts_df = tables[1]
 
     ## Export table (HTML) from DataFrame
-    mars_facts_df.to_html("Templates/Mars_Facts.html", 
-        justify="left",
+    facts_table = mars_facts_df.to_html(justify="left",
         classes="table table-responsive table-bordered table-striped",
-        border=0, encoding="utf-8")
+        border=0)
 
     ## SCRAPE MARS HEMISPHERES
     ## Mars Hemispheres URL
@@ -99,5 +98,5 @@ def scrape_mars():
     ## Print
     print("Scrape completed")
     
-    return (news_title, news_paragraph, featured_image_url, hemisphere_image_urls)
+    return (news_title, news_paragraph, featured_image_url, facts_table, hemisphere_image_urls)
 
