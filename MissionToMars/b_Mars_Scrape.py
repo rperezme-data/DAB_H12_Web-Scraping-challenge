@@ -95,8 +95,15 @@ def scrape_mars():
     ## Close Chrome Browser
     browser.quit()
 
+    ## Build results dictionary
+    results = {'news_title': news_title,
+        'news_paragraph': news_paragraph,
+        'featured_image_url': featured_image_url,
+        'facts_table': facts_table,
+        'hemisphere_image_urls': hemisphere_image_urls}
+
     ## Print
     print("Scrape completed")
-    
-    return (news_title, news_paragraph, featured_image_url, facts_table, hemisphere_image_urls)
+        
+    return (results)
 
