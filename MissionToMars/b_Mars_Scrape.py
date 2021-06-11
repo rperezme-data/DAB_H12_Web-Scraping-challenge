@@ -50,7 +50,7 @@ def scrape_mars():
     tables = pd.read_html(url)
 
     ## Convert "Mars Planet Profile" Table to DataFrame
-    mars_facts_df = tables[1]
+    mars_facts_df = tables[0]
 
     ## Export table (HTML) from DataFrame
     facts_table = mars_facts_df.to_html(justify="left",
