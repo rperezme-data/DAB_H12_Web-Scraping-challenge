@@ -22,22 +22,25 @@ db = client.mars_db
 def index():
 
     ## Retrieve data from MongoDB
-    mars_data = db.mars_data.find_one()
+    mars_data = db.collection.find_one()
 
     ## Return template and data
-    return render_template("index.html", mars=mars_data)
+    return render_template("index.html", mars_data=mars_data)
 
 ## Scrape route (Trigger scrape function)
 @app.route("/scrape")
 def scrape():
 
-    # Run scrape function
+    ## Run scrape function
     mars_data = scrape_mars()
 
-    # Update the Mongo database using update and upsert=True
-    db.collection.update({}, mars_data, upsert=True)
+    ## Insert data into Database (MongoDB)
+    db.collection.insert_one(mars_data)
+    
+    # ## Update Database (MongoDB) using update & upsert=True
+    # db.collection.update({}, mars_data, upsert=True)
 
-    # Redirect back to home page
+    ## Redirect back to Homepage
     return redirect("/")
 
 
