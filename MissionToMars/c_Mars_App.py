@@ -35,10 +35,10 @@ def scrape():
     mars_data = scrape_mars()
 
     ## Insert data into Database (MongoDB)
-    db.collection.insert_one(mars_data)
+    # db.collection.insert_one(mars_data)
     
-    # ## Update Database (MongoDB) using update & upsert=True
-    # db.collection.update({}, mars_data, upsert=True)
+    ## Update Database (MongoDB) using update & upsert=True
+    db.collection.update({}, mars_data, upsert=True)
 
     ## Redirect back to Homepage
     return redirect("/")
