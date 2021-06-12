@@ -49,12 +49,19 @@ def scrape_mars():
     ## Extract Tables from URL
     tables = pd.read_html(url)
 
-    ## Convert "Mars Planet Profile" Table to DataFrame
+    ## Select "Mars Planet Profile" Table & Store as DataFrame
     mars_facts_df = tables[0]
 
-    ## Export table (HTML) from DataFrame
+    ## Set first row as Header & Drop first row
+    mars_facts_df.columns = mars_facts_df.iloc[0]
+    mars_facts_df.drop(0, inplace=True)
+
+    ## Set first column as Index
+    mars_facts_df.set_index("Mars - Earth Comparison", inplace=True)
+
+    ## Convert table DataFrame to HTML (as string)
     facts_table = mars_facts_df.to_html(justify="left",
-        classes="table table-responsive table-bordered table-striped",
+        classes="table table-sm table-bordered table-striped table-secondary",
         border=0)
 
     ## SCRAPE MARS HEMISPHERES
