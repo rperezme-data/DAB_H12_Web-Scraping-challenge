@@ -6,7 +6,7 @@ The scope of this project is to build a web application that scrapes various web
 
 
 ### Script Summary
-The web application was built using Python, Flask, HTML & Bootstrap. Data scraping was carried out using Beautiful Soup, Pandas and Splinter and a NoSQL Database (MongoDB) was used to store and retrieve data with PyMongo. 
+The web application was built using Python, Flask, Jinja, HTML & Bootstrap. Data scraping was carried out using Beautiful Soup, Pandas and Splinter and a NoSQL Database (MongoDB) was used to store and retrieve data with PyMongo. 
 
 
 ### Workflow
@@ -23,15 +23,17 @@ The web application was built using Python, Flask, HTML & Bootstrap. Data scrapi
 
   The scraping code was enclosed in a Python script (*scrape function*) that returns one Python dictionary containing all of the scraped data.
   
-#### 2. Web Application (Flask & MongoDB)
+#### 2. Web Application (Flask, Jinja & MongoDB)
 
 Flask framework was used to define two routes:
 
-  + **Homepage route `\`** that queries MongoDB and passes Mars data into a rendered HTML template to display previously scraped and stored data. 
+  + **Homepage route `\`** that queries MongoDB and passes Mars data into a rendered HTML template to display previously scraped and stored data. Jinja was used to load data from the variable passed by Flask.
+
 
   + **Scrape route `\scrape`** that Executes the *scrape function* to scrape websites and retrieve current data, Stores the returned values in MongoDB & Redirects to Homepage.
 
-A template file called `index.html` was created using Bootstrap in order to display all of the data in the appropiate HTML elements and structure. Database CRUD applications were performed using PyMongo.
+A template file called `index.html` was created using Bootstrap in order to display all of the data in the appropiate HTML elements and structure. Database CRUD applications were performed with PyMongo. Jinja was used to load data (from the variable passed by Flask) into the rendered template.
+
 
 ### Screenshot
 ![WebApp_Screenshot](MissionToMars/Images/WebApp_Screenshot.png)
