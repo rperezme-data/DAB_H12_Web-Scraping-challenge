@@ -27,9 +27,9 @@ The web application was built using Python, Flask, HTML & Bootstrap. Data scrapi
 
 Flask framework was used to define two routes:
 
-  + **Homepage route `\\`** that queries MongoDB and passes Mars data into a rendered HTML template to display previously scraped and stored data. 
+  + **Homepage route `\`** that queries MongoDB and passes Mars data into a rendered HTML template to display previously scraped and stored data. 
 
-  + **Scrape route `\\scrape`** that Executes the *scrape function* to scrape websites and retrieve current data, Stores the returned values in MongoDB & Redirects to Homepage.
+  + **Scrape route `\scrape`** that Executes the *scrape function* to scrape websites and retrieve current data, Stores the returned values in MongoDB & Redirects to Homepage.
 
 A template file called `index.html` was created using Bootstrap in order to display all of the data in the appropiate HTML elements and structure. Database CRUD applications were performed using PyMongo.
 
