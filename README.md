@@ -13,14 +13,22 @@ This web application was built using Python, Flask, HTML & Bootstrap. Data scrap
 
 #### 1. Scraping (Beautiful Soup & Splinter)
 
-**a) **
+**a) Nasa Mars News**
 
+**b) JPL Mars Space Images - Featured Image**
 
+**c) Mars Facts**
+
+**d) Mars Hemispheres**
 
 
 #### 2. Web Application (Flask & MongoDB)
 
+**a) \\**
 
 
-### Full-size Screenshot
+**b) \\scrape**
+
+
+### Screenshot
 ![WebApp_Screenshot](MissionToMars/Images/WebApp_Screenshot.png)
