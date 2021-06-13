@@ -48,26 +48,3 @@ def scrape():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-
-
-
-
-
-
-
-# ## TEST SCRAPE FUNCTION
-# results = scrape_mars()
-
-# for item in results:
-#     print(item)
-#     print("")
-
-
-# ## Initialize PyMongo (MongoDB)
-# conn = 'mongodb://localhost:27017'
-# client = pymongo.MongoClient(conn)
-
-# ## Define database and collection
-# db = client.commerce_db
-# collection = db.items
