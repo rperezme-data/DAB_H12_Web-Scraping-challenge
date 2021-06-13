@@ -6,28 +6,30 @@ The scope of this project is to build a web application that scrapes various web
 
 
 ### Script Summary
-This web application was built using Python, Flask, HTML & Bootstrap. Data scraping was carried out using Beautiful Soup and Splinter and a NoSQL Database (MongoDB) was used to store and retrieve data with PyMongo. 
+The web application was built using Python, Flask, HTML & Bootstrap. Data scraping was carried out using Beautiful Soup, Pandas and Splinter and a NoSQL Database (MongoDB) was used to store and retrieve data with PyMongo. 
 
 
 ### Workflow
 
-#### 1. Scraping (Beautiful Soup & Splinter)
+#### 1. Scraping (Beautiful Soup, Pandas & Splinter)
 
-**a) Nasa Mars News**
+  + **Nasa Mars News**: Scrape the [Mars News Site](https://redplanetscience.com/) and collect the latest News Title and Paragraph Text.
 
-**b) JPL Mars Space Images - Featured Image**
+  + **JPL Mars Space Images - Featured Image**: Visit the url for the [Featured Spage Image](https://spaceimages-mars.com/) site and Navigate the site and get image url for the current Featured Mars Image.
 
-**c) Mars Facts**
+  + **Mars Facts**: Visit the [Mars Facts](https://galaxyfacts-mars.com/) webpage and use scrape the *Mars-Earth Comparison* table. 
 
-**d) Mars Hemispheres**
+  + **Mars Hemispheres**: Visit and Navigate the [Astrogeology](https://marshemispheres.com/) site to retrieve high resolution images url and the Hemisphere Title.
 
-
+  The scraping code was enclosed in a Python script (*scrape function*) that returns one Python dictionary containing all of the scraped data.
+  
 #### 2. Web Application (Flask & MongoDB)
 
-**a) \\**
+Flask framework was used to define two routes:
 
+  + **Homepage route `\\`** that queries MongoDB and passes Mars data into an HTML template to display previously scraped and stored data.
 
-**b) \\scrape**
+  + **Scrape route `\\scrape`** that Executes the *scrape function* to scrape websites and retrieve current data, Stores the returned values in MongoDB & Redirects to Homepage.
 
 
 ### Screenshot
