@@ -1,4 +1,4 @@
-# H12_Web-Scraping-challenge
+# Web-Scraping-challenge
 ## Web App: Scrape data from various websites & Display in a single HTML page
 
 ### Description
